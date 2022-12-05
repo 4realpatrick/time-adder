@@ -40,7 +40,7 @@ function App() {
       })
         [operation]({
           ...end,
-          M: (end?.M || 0) - 1 
+          M: operation === "add" ? (end?.M || 0) - 1 : (end?.M || 0) + 1
         })
         .format("YYYY/MM/DD/HH:mm")
     );
