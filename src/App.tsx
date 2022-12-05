@@ -13,13 +13,7 @@ interface IDayState {
 function App() {
   dayjs.extend(objectsupport);
   const [start, setStart] = useState<IDayState>();
-  const [end, setEnd] = useState<IDayState>({
-    y: 0,
-    M: 0,
-    d: 0,
-    h: 0,
-    m: 0,
-  });
+  const [end, setEnd] = useState<IDayState>();
   const [result, setResult] = useState<string>("");
   const [operation, setOperation] = useState<"add" | "subtract">("add");
   const handleChange = (
